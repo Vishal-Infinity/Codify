@@ -27,7 +27,6 @@ const parseIntOr = (v: string | undefined, fallback: number) =>
 export const config = {
   nodeEnv: (process.env.NODE_ENV || 'development') as 'development' | 'production' | 'test',
   port: parseIntOr(process.env.PORT, 3000),
-  frontendUrl: process.env.FRONTEND_URL || 'http://localhost:3000',
 
   // Database
   dbHost: process.env.DB_HOST as string,

@@ -8,7 +8,6 @@ import { config } from './config/env.js'
 
 const app = express()
 
-app.use(cors({ origin: config.frontendUrl }))
 app.use(express.json())
 app.use(morgan(config.nodeEnv === 'production' ? 'combined' : 'dev'))
 
@@ -18,6 +17,11 @@ app.use('/users', usersRoutes)
 app.use('/otp', otpRoutes)
 
 const PORT = config.port || 3000
+
+app.get('/', (req, res) => {
+  res.send('Welcome to the Codify Backend API')
+})
+
 app.listen(PORT, () => {
   console.log(`🚀 Backend: http://localhost:${PORT}`)
 })
