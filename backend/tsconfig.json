@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "outDir": "dist",
+    "rootDir": "src",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "experimentalDecorators": true,     // ← ADD
+    "emitDecoratorMetadata": true,       // ← ADD
+    "paths": {
+      "@prisma/client": ["./node_modules/@prisma/client"]
+    }
+  },
+  "include": ["src"]
+}
