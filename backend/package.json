@@ -10,8 +10,6 @@
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.6",
-    "@types/jsonwebtoken": "^9.0.10",
-    "@types/morgan": "^1.9.10",
     "@types/node": "^24.10.1",
     "@types/passport-strategy": "^0.2.38",
     "prisma": "^7.1.0",
