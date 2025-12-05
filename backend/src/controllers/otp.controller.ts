@@ -57,7 +57,8 @@ export const verifyOtp = async (req: Request, res: Response) => {
     }
 
     // Validate user is authenticated
-    const userId = req.user?.sub
+    const userId = (req.user as any)?.sub
+    
     if (!userId) {
       return res.status(401).json({ error: 'Unauthorized: No user ID' })
     }

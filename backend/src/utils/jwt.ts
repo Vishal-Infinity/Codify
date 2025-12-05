@@ -9,7 +9,7 @@ interface UserPayload {
 if (!config.jwtSecret) throw new Error('Missing JWT_SECRET') // runtime guard
 
 export const signJwt = (payload: UserPayload): string => {
-  return jwt.sign(payload, config.jwtSecret, { expiresIn: config.jwtExpiresIn })
+  return jwt.sign(payload as UserPayload, config.jwtSecret as any, { expiresIn: config.jwtExpiresIn as any})
 }
 
 export const verifyJwt = (token: string): UserPayload => {
