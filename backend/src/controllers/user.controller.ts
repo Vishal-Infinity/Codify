@@ -7,7 +7,7 @@ import { hashPassword } from '../utils/bcrypt.js'
 /* Retrieves the authenticated user's profile information from the database */
 export const getProfile = async (req: Request, res: Response) => {
   try {
-    const userId = (req as any).user!.sub
+    const userId = (req.user as any).sub
 
     const user = await prisma.users.findUnique({
       where: { id: userId },
@@ -39,7 +39,7 @@ export const getProfile = async (req: Request, res: Response) => {
 /* Creates a new user (admin / authenticated creation) */
 export const createUser = async (req: Request, res: Response) => {
   try {
-    const { email, password, first_name, last_name, phone } = req.body as any
+    const { email, password, first_name, last_name, phone } = req.body
 
     if (!email) {
       return res.status(400).json({ error: 'Email is required' })
