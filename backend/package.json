@@ -23,8 +23,6 @@
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
     "@types/passport": "^1.0.17",
-    "@types/passport-github2": "^1.2.9",
-    "@types/passport-google-oauth20": "^2.0.17",
     "@types/pg": "^8.15.6",
     "bcryptjs": "^3.0.3",
     "cors": "^2.8.5",
